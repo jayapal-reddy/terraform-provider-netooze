@@ -1,10 +1,10 @@
-package serverspace
+package netooze
 
 import (
 	"fmt"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"gitlab.itglobal.com/b2c/terraform-provider-serverspace/serverspace/ssclient"
+	"github.com/netooze/terraform-provider-netooze/netooze/ssclient"
 )
 
 func updateNICS(d *schema.ResourceData, client *ssclient.SSClient, serverID string) error {

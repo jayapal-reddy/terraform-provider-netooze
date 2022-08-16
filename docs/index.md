@@ -1,18 +1,18 @@
 ---
-page_title: "serverspace Provider"
+page_title: "netooze Provider"
 ---
 
-# serverspace Provider
+# netooze Provider
 
-The Serverspace provider is used to interact with the resources supported by Serverspace. Before use configure the provider with the proper credentials.
+The Netooze provider is used to interact with the resources supported by netooze. Before use configure the provider with the proper credentials.
 
 ## Example Usage
 
 ```hcl
 terraform {
   required_providers {
-    serverspace = {
-      source = "itglobalcom/serverspace"
+    netooze = {
+      source = "netooze/netooze"
       version = "~> 0.2.2"
     }
   }
@@ -22,13 +22,13 @@ terraform {
 # or using -var="api_key=..." CLI option
 variable "api_key" {}
 
-# Configure the Serverspace Provider
-provider "serverspace" {
+# Configure the Netooze Provider
+provider "netooze" {
   key = var.api_key
 }
 
 # Create a web server
-resource "serverspace_server" "web_server" {
+resource "netooze_server" "web_server" {
   # ...
 }
 ```

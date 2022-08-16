@@ -1,16 +1,16 @@
 ---
-page_title: "serverspace_ssh Resource - terraform-provider-serverspace"
+page_title: "netooze_ssh Resource - terraform-provider-netooze"
 ---
 
-# serverspace_ssh (Resource)
+# netooze_ssh (Resource)
 
-Serverspace SSH key resource allows you to manage SSH keys for Server access. Keys created with this resource can be referenced in your Server configuration via their ID.
+Netooze SSH key resource allows you to manage SSH keys for Server access. Keys created with this resource can be referenced in your Server configuration via their ID.
 
 ## Example Usage
 
 ### Create a new key
 ```hcl
-resource "serverspace_ssh" "example_key" {
+resource "netooze_ssh" "example_key" {
   name = "example-key"
   public_key = "ssh-ed25519 AAAAC...aH user@example"
 }
@@ -18,11 +18,11 @@ resource "serverspace_ssh" "example_key" {
 
 ### Create a server using the key
 ```hcl
-resource "serverspace_server" "example_server" {
+resource "netooze_server" "example_server" {
   name = "example-server"
   # ...  
   ssh_keys = [
-    resource.serverspace_ssh.example_key.id
+    resource.netooze_ssh.example_key.id
   ]
 ```
 

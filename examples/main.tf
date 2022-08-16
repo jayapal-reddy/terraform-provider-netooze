@@ -1,8 +1,8 @@
 terraform {
   required_providers {
-    serverspace = {
+    netooze = {
       version = "0.2"
-      source  = "serverspace.by/main/serverspace"
+      source  = "netooze.com/main/netooze"
     }
   }
 }
@@ -13,12 +13,12 @@ locals {
 }
 
 
-resource "serverspace_ssh" "my_ssh" {
+resource "netooze_ssh" "my_ssh" {
   name       = "just a key"
   public_key = file("./ssh_key.pub")
 }
 
-resource "serverspace_isolated_network" "my_net" {
+resource "netooze_isolated_network" "my_net" {
   location       = local.current_location
   name           = "my_net"
   description    = "Internal network"
@@ -27,7 +27,7 @@ resource "serverspace_isolated_network" "my_net" {
 }
 
 
-resource "serverspace_server" "vm1" {
+resource "netooze_server" "vm1" {
   name     = "vm1"
   image    = var.ubuntu
   location = local.current_location
@@ -42,7 +42,7 @@ resource "serverspace_server" "vm1" {
   }
 
   nic {
-    network      = serverspace_isolated_network.my_net.id
+    network      = netooze_isolated_network.my_net.id
     network_type = "Isolated"
     bandwidth    = 0
   }
@@ -57,7 +57,7 @@ resource "serverspace_server" "vm1" {
     bandwidth    = 100
   }
 
-  ssh_keys = [serverspace_ssh.my_ssh.id]
+  ssh_keys = [netooze_ssh.my_ssh.id]
 
 
   connection {
@@ -80,9 +80,9 @@ resource "serverspace_server" "vm1" {
 
 
 output "my_net" {
-  value = serverspace_isolated_network.my_net
+  value = netooze_isolated_network.my_net
 }
 
 output "vm1" {
-  value = serverspace_server.vm1
+  value = netooze_server.vm1
 }

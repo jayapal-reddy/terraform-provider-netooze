@@ -1,18 +1,18 @@
 ---
-page_title: "serverspace_isolated_network Resource - terraform-provider-serverspace"
+page_title: "netooze_isolated_network Resource - terraform-provider-netooze"
   
 ---
 
-# serverspace_isolated_network (Resource)
+# netooze_isolated_network (Resource)
 
-Serverspace Isolated Network resource allows you to create isolated (private) networks. Servers in the same location as the network can be joined to it via network ID. 
+Netooze Isolated Network resource allows you to create isolated (private) networks. Servers in the same location as the network can be joined to it via network ID. 
 
 ## Example Usage
 
 ### Create a new network
 
 ```hcl
-resource "serverspace_isolated_network" "example_network" {
+resource "netooze_isolated_network" "example_network" {
   name = "example-network"
   description = "Internal network with description"
   location = "am2"
@@ -24,11 +24,11 @@ resource "serverspace_isolated_network" "example_network" {
 ### Join a server
 
 ```hcl
-resource "serverspace_server" "example_server" {
+resource "netooze_server" "example_server" {
   name = "example-server"
   # ...
   nic {
-    network = resource.serverspace_isolated_network.example_net.id
+    network = resource.netooze_isolated_network.example_net.id
     network_type = "Isolated"
     bandwidth = 0
   }

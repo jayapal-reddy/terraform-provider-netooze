@@ -1,16 +1,16 @@
 ---
-page_title: "serverspace_server Resource - terraform-provider-serverspace"
+page_title: "netooze_server Resource - terraform-provider-netooze"
 ---
 
-# serverspace_server (Resource)
+# netooze_server (Resource)
 
-Serverspace Server resource can be used to create, modify, and delete Servers. Servers also support [provisioning](https://www.terraform.io/docs/language/resources/provisioners/syntax.html).
+Netooze Server resource can be used to create, modify, and delete Servers. Servers also support [provisioning](https://www.terraform.io/docs/language/resources/provisioners/syntax.html).
 
 ## Example Usage
 
 ### Create a new server
 ```hcl
-resource "serverspace_server" "example_server" {
+resource "netooze_server" "example_server" {
   name = "example-server"
   image = "Ubuntu-20.04-X64"
   location = "am2"
@@ -31,13 +31,13 @@ resource "serverspace_server" "example_server" {
   }
 
   nic {
-    network = resource.serverspace_isolated_network.example_net.id
+    network = resource.netooze_isolated_network.example_net.id
     network_type = "Isolated"
     bandwidth = 0
   }
   
   ssh_keys = [
-    resource.serverspace_ssh.example_key.id
+    resource.netooze_ssh.example_key.id
   ]
 ```
 

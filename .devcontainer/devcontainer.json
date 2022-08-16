@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/go
 {
-	"name": "Serverspace terraform provider",
+	"name": "Netooze terraform provider",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
@@ -19,8 +19,8 @@
 	],
 	"containerEnv": {
 		"TF_LOG": "INFO",
-		"SERVERSPACE_KEY": "0184305925977a745449f94c06d0f454073d6ee3ecb975ea314131ee64c9f0ee",
-		"SERVERSPACE_HOST": "https://api.ss4test.com"
+		"NETOOZE_KEY": "0184305925977a745449f94c06d0f454073d6ee3ecb975ea314131ee64c9f0ee",
+		"NETOOZE_HOST": "https://api.netooze.com"
 	},
 	// Set *default* container specific settings.json values on container create.
 	"settings": {

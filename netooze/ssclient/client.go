@@ -7,13 +7,13 @@ import (
 )
 
 var HOST_MAP = map[string]string{
-	"02": "https://api.serverspace.by",
-	"04": "https://api.serverspace.io",
-	"06": "https://api.serverspace.ru",
-	"07": "https://api.lincore.kz",
-	"08": "https://api.serverspace.us",
-	"09": "https://api.serverspace.com.tr",
-	"0a": "https://api.serverspace.in",
+	"02": "https://api.netooze.com",
+	"04": "https://api.netooze.com",
+	"06": "https://api.netooze.com",
+	"07": "https://api.netooze.com",
+	"08": "https://api.netooze.com",
+	"09": "https://api.netooze.com",
+	"0a": "https://api.netooze.com",
 }
 
 type SSClient struct {

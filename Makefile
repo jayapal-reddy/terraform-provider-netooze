@@ -1,6 +1,6 @@
-HOSTNAME=serverspace.by
+HOSTNAME=netooze.com
 NAMESPACE=main
-NAME=serverspace
+NAME=netooze
 BINARY=terraform-provider-${NAME}
 VERSION=0.2
 OS_ARCH=linux_amd64

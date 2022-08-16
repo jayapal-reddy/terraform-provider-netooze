@@ -1,4 +1,4 @@
-package serverspace
+package netooze
 
 import (
 	"context"
@@ -6,7 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"gitlab.itglobal.com/b2c/terraform-provider-serverspace/serverspace/ssclient"
+	"github.com/netooze/terraform-provider-netooze/netooze/ssclient"
 )
 
 const NETWORK_IS_USING_ERROR_CODE = -19511

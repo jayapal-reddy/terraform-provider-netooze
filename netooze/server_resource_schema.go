@@ -1,9 +1,9 @@
-package serverspace
+package netooze
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"gitlab.itglobal.com/b2c/terraform-provider-serverspace/serverspace/ssclient"
+	"github.com/netooze/terraform-provider-netooze/netooze/ssclient"
 )
 
 var serverSchema = map[string]*schema.Schema{

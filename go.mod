@@ -1,4 +1,4 @@
-module gitlab.itglobal.com/b2c/terraform-provider-serverspace
+module github.com/netooze/terraform-provider-netooze
 
 go 1.16
 
